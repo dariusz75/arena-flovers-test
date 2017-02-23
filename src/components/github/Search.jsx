@@ -1,18 +1,34 @@
 import React, {Component} from 'react';
 
+
 class Search extends Component{
 
 	onSubmit(e){
 		e.preventDefault();
-		console.log('yes, yes,yes');
+
+		console.log('CLICKED!');
+
+		let username = this.refs.username.value.trim();
+
+		if(!username){
+			alart('Please enter a username');
+			return;
+		}
+		
+		this.props.onFormSubmit(username);
+		this.refs.username.value = '';
+
 	}
+
+
 
 	render(){
 		return(
 			<div id="custom-search-input">
        	<form onSubmit={this.onSubmit.bind(this)}>
     			<div className="form-group">
-      			<input type="text" className="form-control" id="email" placeholder="Please type GitHub Username"></input>
+    				<label>Find a GitHub User</label>
+      			<input type="text" ref="username" className="form-control" id="text" placeholder="Please type GitHub Username" />
     			</div>
     			<button type="submit" className="btn btn-default">Search</button>
   			</form>	         
@@ -22,3 +38,6 @@ class Search extends Component{
 }
 
 export default Search
+
+
+

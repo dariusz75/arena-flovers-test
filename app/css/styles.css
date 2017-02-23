@@ -17,14 +17,25 @@ span {
     
 }
 
-#custom-search-input input{
+#custom-search-input label{
+    margin-top: 20px;
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+    
+}
+
+
+#custom-search-input input {
+    margin-top: 10px;
     padding: 10px;
     border: 2px solid grey;
     background-color: #fff;
 }
 
-#custom-search-input button{
-    margin: 2px 0 0 0;
+#custom-search-input button {
+    width: 100%;
+    margin-bottom: 30px;
     padding: 10px;
     border: 2px solid grey;
     background-color: #fff;
