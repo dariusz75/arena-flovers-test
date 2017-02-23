@@ -18,11 +18,11 @@ class Profile extends Component{
 					<div className="row">
 						<div className="col-sm-4 photo"><img src={this.props.userData.avatar_url} /></div>
 							<div className="col-sm-8">
-								<h2>{this.props.userData.name}</h2>
 								<h2>{this.props.userData.login}</h2>
+								<h2>{this.props.userData.name}</h2>
 								<h2>{this.props.userData.location}</h2>
 								<h2>{this.props.userData.html_url}</h2>
-								<a className="btn btn-primary" target="_blank" href={this.props.userData.html_url}>{this.props.userData.name} GitHub Account</a>
+								<a className="btn btn-primary to-github" target="_blank" href={this.props.userData.html_url}>Go to {this.props.userData.name} GitHub Account</a>
 							</div>
 					</div>
 					<div className="row">

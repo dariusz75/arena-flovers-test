@@ -9,11 +9,6 @@ class Search extends Component{
 		console.log('CLICKED!');
 
 		let username = this.refs.username.value.trim();
-
-		if(!username){
-			alart('Please enter a username');
-			return;
-		}
 		
 		this.props.onFormSubmit(username);
 		this.refs.username.value = '';

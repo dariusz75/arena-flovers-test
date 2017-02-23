@@ -50,7 +50,10 @@ class App extends Component{
 	}
 
 	handleFormSubmit(username){
-		alert(username);
+		this.setState({username: username}, function(){
+			this.getUserData();
+			this.getUserRepos();
+		});
 	}
 
 	componentDidMount() {
