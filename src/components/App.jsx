@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
+import Profile from './github/Profile.jsx'
 
 class App extends Component{
 	constructor(props) {
@@ -21,7 +22,8 @@ class App extends Component{
 			success: function(data) {
 				console.log(data);
 			}.bind(this),
-			error: function(xhr, tatus, error) {
+			error: function(xhr, status, error) {
+				this.setState({username: null});
 				alert(error);
 			}.bind(this),
 		});
@@ -33,7 +35,9 @@ class App extends Component{
 
 	render() {
 		return(
-			<div>{this.props.clientId}</div>
+			<div>
+				<Profile />
+			</div>
 			);
 	}
 }
