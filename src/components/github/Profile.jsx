@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import RepoList from './RepoList.jsx';
+import Search from './Search.jsx';
 
 class Profile extends Component{
 
@@ -10,17 +11,8 @@ class Profile extends Component{
 				<div className="panel-heading">
 				<div className="row">
 					<div className="col-sm-4"><h2>Profile Details</h2></div>
-					<div className="col-sm-8">
-						 <div id="custom-search-input">
-                <div className="input-group col-md-12">
-                    <input type="text" className="form-control input-lg" placeholder="Search by Username" />
-                    <span className="input-group-btn">
-                        <button className="btn btn-info btn-lg" type="button">
-                            <i className="glyphicon glyphicon-search"></i>
-                        </button>
-                    </span>
-                </div>
-            </div>
+					<div className="col-sm-8">						
+						<Search />
 					</div>
 				</div>
 				</div>
