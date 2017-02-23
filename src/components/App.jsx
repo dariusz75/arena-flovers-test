@@ -3,9 +3,8 @@ import ReactDOM from 'react-dom';
 import Profile from './github/Profile.jsx'
 
 class App extends Component{
-	constructor(props) {
+	constructor(props){
 		super(props);
-
 		this.state = {
 			username: 'dariusz75',
 			userData: [],
@@ -14,18 +13,21 @@ class App extends Component{
 		}
 	}
 
-	getUserData() {
+
+
+	getUserData(){
 		$.ajax({
-			url: 'https://api.github.com/users/' + this.state.username + '?client_id=' + this.props.clientId + '&client_secret' + this.props.clientSecret,
+			url: 'https://api.github.com/users/'+this.state.username+'?client_id='+this.props.clientId+'&client_secret='+this.props.clientSecret,
 			dataType: 'json',
 			cache: false,
-			success: function(data) {
+			success: function(data){
+				this.setState({userData: data});
 				console.log(data);
 			}.bind(this),
-			error: function(xhr, status, error) {
+			error: function(xhr, status, err){
 				this.setState({username: null});
-				alert(error);
-			}.bind(this),
+				alert(err);
+			}.bind(this)
 		});
 	}
 
@@ -36,7 +38,7 @@ class App extends Component{
 	render() {
 		return(
 			<div>
-				<Profile />
+				<Profile userData = {this.state.userData} />
 			</div>
 			);
 	}
