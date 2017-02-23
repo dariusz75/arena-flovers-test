@@ -14,7 +14,7 @@ class App extends Component{
 	}
 
 
-
+	/* Getting user details  */
 	getUserData(){
 		$.ajax({
 			url: 'https://api.github.com/users/'+this.state.username+'?client_id='+this.props.clientId+'&client_secret='+this.props.clientSecret,
@@ -31,7 +31,7 @@ class App extends Component{
 		});
 	}
 
-
+	/* Getting user repositories  */
 	getUserRepos(){
 		$.ajax({
 			url: 'https://api.github.com/users/'+this.state.username+'/repos?per_page='+this.state.perPage+'&client_id='+this.props.clientId+'&client_secret='+this.props.clientSecret+'&sort=created',
