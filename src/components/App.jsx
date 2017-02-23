@@ -56,9 +56,9 @@ class App extends Component{
 	render() {
 		return(
 			<div>
-				<Profile userData = {this.state.userData} />
+				<Profile {...this.state} />
 			</div>
-			);
+			)
 	}
 }
 
