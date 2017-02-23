@@ -19928,9 +19928,39 @@
 						'div',
 						{ className: 'panel-heading' },
 						_react2['default'].createElement(
-							'h2',
-							null,
-							'Profile Details'
+							'div',
+							{ className: 'row' },
+							_react2['default'].createElement(
+								'div',
+								{ className: 'col-sm-4' },
+								_react2['default'].createElement(
+									'h2',
+									null,
+									'Profile Details'
+								)
+							),
+							_react2['default'].createElement(
+								'div',
+								{ className: 'col-sm-8' },
+								_react2['default'].createElement(
+									'div',
+									{ id: 'custom-search-input' },
+									_react2['default'].createElement(
+										'div',
+										{ className: 'input-group col-md-12' },
+										_react2['default'].createElement('input', { type: 'text', className: 'form-control input-lg', placeholder: 'Search by Username' }),
+										_react2['default'].createElement(
+											'span',
+											{ className: 'input-group-btn' },
+											_react2['default'].createElement(
+												'button',
+												{ className: 'btn btn-info btn-lg', type: 'button' },
+												_react2['default'].createElement('i', { className: 'glyphicon glyphicon-search' })
+											)
+										)
+									)
+								)
+							)
 						)
 					),
 					_react2['default'].createElement(
@@ -19969,6 +19999,12 @@
 								{ className: 'btn btn-primary', target: '_blank', href: this.props.userData.html_url },
 								this.props.userData.name,
 								' GitHub Account'
+							),
+							_react2['default'].createElement('br', null),
+							_react2['default'].createElement(
+								'h2',
+								{ className: 'redclass' },
+								'LIST of REPOSITORIES and SEARCH FUNCTIONALITY will be added soon'
 							)
 						)
 					)
